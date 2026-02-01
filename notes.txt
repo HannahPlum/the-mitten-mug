@@ -1,0 +1,25 @@
+Example for restaurant:
+
+Home: Hero image, restaurant description, hours
+Menu: Food/drink items organized by category
+About: Chef background, restaurant story
+Contact: Address, phone, contact form, map
+Gallery: Food photos
+
+Your site must include:
+
+Pages (4-5 required): - Home page with hero section and overview - About page with business story/mission - Services or Menu page (depending on business type) - Contact page with contact form (form doesn’t need backend) - Optional: Gallery, Testimonials, or Blog page
+
+Technical Requirements: - Responsive design (works on mobile and desktop) - Navigation menu that links all pages - At least 3 sections per page with real content - Professional styling (CSS) - Deployed and accessible via public URL
+
+Content Requirements: - Fictional business name and branding - Realistic business content (not placeholder text) - Professional tone appropriate for business type - Images (can use placeholder services like Unsplash or Lorem Picsum)
+
+Content Writing Guidelines: - Total content: 500-800 words across all pages - Per page: 3-5 sections with 2-4 sentences each - Headings: Clear section headings on each page - Business details: Include hours, location (can be fictional), contact info - About section: 3-4 sentences about business story/mission - Services/Menu: 5-10 items with brief descriptions - Tone: Professional but conversational (write like you’re explaining to a friend)
+
+colors
+green pop #5E8E65
+black #000000
+gray #D2D2D2
+white #ffffff
+
+had difficulty with claude styling buttons, it made one slightly larger than the other
