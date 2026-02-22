@@ -12,12 +12,13 @@ The cats page (`cats.html`) shows 6 foster cat cards in a grid. Each card has an
 
 ---
 
-## Step 1 — Add `<dialog>` HTML to cats.html
+## Step 1 — Add `<dialog>` HTML to cats.html ✅
 
-Insert just before the `<script src="script.js">` line (before closing `</body>`):
+Insert just before the `<script src="script.js">` line (before closing `</body>`). Use `aria-labelledby` pointing to a visually-hidden `<h2>` inside the dialog (preferred over `aria-label` for screen reader compatibility):
 
 ```html
-<dialog id="cat-lightbox" aria-modal="true" aria-label="Cat photo lightbox">
+<dialog id="cat-lightbox" aria-modal="true" aria-labelledby="lightbox-title">
+    <h2 id="lightbox-title" class="sr-only">Cat photo lightbox</h2>
     <button class="lightbox-close" aria-label="Close lightbox">&times;</button>
     <figure class="lightbox-figure">
         <img id="lightbox-img" src="" alt="">
@@ -26,15 +27,28 @@ Insert just before the `<script src="script.js">` line (before closing `</body>`
 </dialog>
 ```
 
-**Test:** Page looks identical. In DevTools console: `document.getElementById('cat-lightbox')` should return the element.
+**Test:** Page looks identical. In DevTools console: `document.getElementById('cat-lightbox')` should return the element. No accessibility warnings for missing dialog title.
 
 ---
 
 ## Step 2 — Style the lightbox in style.css
 
-Append at the very end of `style.css`:
+Append at the very end of `style.css` (`.sr-only` utility first, then lightbox styles):
 
 ```css
+/* ── Utility ── */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
 /* ── Lightbox ── */
 #cat-lightbox {
     border: none;
