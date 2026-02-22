@@ -35,19 +35,19 @@
 
     <section class="cat-grid">
         <div class="cat-card">
-            <img src="images/fosterCats/manja-vitolic-gKXKBY-C-Dk-unsplash.jpg" alt="Whiskers the cat">
+            <img src="images/fosterCats/manja-vitolic-gKXKBY-C-Dk-unsplash.jpg" alt="Whiskers the cat" class="lightbox-trigger" data-name="Whiskers">
             <h3>Whiskers</h3>
             <p>A gentle soul who loves sunny spots and chin scratches. Whiskers is always ready for a quiet cuddle
                 session.</p>
         </div>
         <div class="cat-card">
-            <img src="images/fosterCats/loan-7AIDE8PrvA0-unsplash.jpg" alt="Mittens the cat">
+            <img src="images/fosterCats/loan-7AIDE8PrvA0-unsplash.jpg" alt="Mittens the cat" class="lightbox-trigger" data-name="Mittens">
             <h3>Mittens</h3>
             <p>Playful and curious, Mittens will steal your heart with her silly antics and love for chasing feather
                 toys.</p>
         </div>
         <div class="cat-card">
-            <img src="images/fosterCats/michael-sum-LEpfefQf4rU-unsplash.jpg" alt="Biscuit the cat">
+            <img src="images/fosterCats/michael-sum-LEpfefQf4rU-unsplash.jpg" alt="Biscuit the cat" class="lightbox-trigger" data-name="Biscuit">
             <h3>Biscuit</h3>
             <p>Named for her love of kneading, Biscuit is a sweet lap cat who purrs the moment you sit down.</p>
         </div>
@@ -89,6 +89,14 @@
             <p>Orlando, FL 32801</p>
         </div>
     </footer>
+
+    <dialog id="cat-lightbox" aria-modal="true" aria-label="Cat photo lightbox">
+        <button class="lightbox-close" aria-label="Close lightbox">&times;</button>
+        <figure class="lightbox-figure">
+            <img id="lightbox-img" src="" alt="">
+            <figcaption id="lightbox-caption"></figcaption>
+        </figure>
+    </dialog>
 
     <script src="script.js"></script>
 </body>
