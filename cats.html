@@ -35,35 +35,35 @@
 
     <section class="cat-grid">
         <div class="cat-card">
-            <img src="images/fosterCats/manja-vitolic-gKXKBY-C-Dk-unsplash.jpg" alt="Whiskers the cat">
+            <img src="images/fosterCats/manja-vitolic-gKXKBY-C-Dk-unsplash.jpg" alt="Whiskers the cat" class="lightbox-trigger" data-name="Whiskers">
             <h3>Whiskers</h3>
             <p>A gentle soul who loves sunny spots and chin scratches. Whiskers is always ready for a quiet cuddle
                 session.</p>
         </div>
         <div class="cat-card">
-            <img src="images/fosterCats/loan-7AIDE8PrvA0-unsplash.jpg" alt="Mittens the cat">
+            <img src="images/fosterCats/loan-7AIDE8PrvA0-unsplash.jpg" alt="Mittens the cat" class="lightbox-trigger" data-name="Mittens">
             <h3>Mittens</h3>
             <p>Playful and curious, Mittens will steal your heart with her silly antics and love for chasing feather
                 toys.</p>
         </div>
         <div class="cat-card">
-            <img src="images/fosterCats/michael-sum-LEpfefQf4rU-unsplash.jpg" alt="Biscuit the cat">
+            <img src="images/fosterCats/michael-sum-LEpfefQf4rU-unsplash.jpg" alt="Biscuit the cat" class="lightbox-trigger" data-name="Biscuit">
             <h3>Biscuit</h3>
             <p>Named for her love of kneading, Biscuit is a sweet lap cat who purrs the moment you sit down.</p>
         </div>
         <div class="cat-card">
-            <img src="images/fosterCats/alexander-london-mJaD10XeD7w-unsplash.jpg" alt="Shadow the cat">
+            <img src="images/fosterCats/alexander-london-mJaD10XeD7w-unsplash.jpg" alt="Shadow the cat" class="lightbox-trigger" data-name="Shadow">
             <h3>Shadow</h3>
             <p>Mysterious and elegant, Shadow enjoys observing from high perches and will warm up to you with patience.
             </p>
         </div>
         <div class="cat-card">
-            <img src="images/fosterCats/val-slusher-exEjsGudbMI-unsplash.jpg" alt="Pumpkin the cat">
+            <img src="images/fosterCats/val-slusher-exEjsGudbMI-unsplash.jpg" alt="Pumpkin the cat" class="lightbox-trigger" data-name="Pumpkin">
             <h3>Pumpkin</h3>
             <p>A total sweetheart with a big personality. Pumpkin greets everyone with headbutts and loud purrs.</p>
         </div>
         <div class="cat-card">
-            <img src="images/fosterCats/yash-gupta-pvrTvoDHcbw-unsplash.jpg" alt="Luna the cat">
+            <img src="images/fosterCats/yash-gupta-pvrTvoDHcbw-unsplash.jpg" alt="Luna the cat" class="lightbox-trigger" data-name="Luna">
             <h3>Luna</h3>
             <p>Calm and affectionate, Luna loves to curl up beside you and watch the world go by from the window.</p>
         </div>
@@ -90,7 +90,16 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <dialog id="cat-lightbox" aria-modal="true" aria-labelledby="lightbox-title">
+        <h2 id="lightbox-title" class="sr-only">Cat photo lightbox</h2>
+        <button class="lightbox-close" aria-label="Close lightbox">&times;</button>
+        <figure class="lightbox-figure">
+            <img id="lightbox-img" alt="">
+            <figcaption id="lightbox-caption"></figcaption>
+        </figure>
+    </dialog>
+
+    <script src="script.js" defer></script>
 </body>
 
 </html>
