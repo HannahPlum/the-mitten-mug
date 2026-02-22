@@ -856,6 +856,9 @@ h6 {
 }
 
 @media (max-width: 400px) {
+    #cat-lightbox {
+        padding-top: 2.75rem;
+    }
     .lightbox-close {
         top: 0.25rem;
         right: 0.25rem;
