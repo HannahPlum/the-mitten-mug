@@ -21,7 +21,7 @@ Insert just before the `<script src="script.js">` line (before closing `</body>`
     <h2 id="lightbox-title" class="sr-only">Cat photo lightbox</h2>
     <button class="lightbox-close" aria-label="Close lightbox">&times;</button>
     <figure class="lightbox-figure">
-        <img id="lightbox-img" src="" alt="">
+        <img id="lightbox-img" alt="">
         <figcaption id="lightbox-caption"></figcaption>
     </figure>
 </dialog>
