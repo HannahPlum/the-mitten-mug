@@ -12,15 +12,22 @@ const lightboxImg  = document.getElementById('lightbox-img');
 const lightboxCap  = document.getElementById('lightbox-caption');
 const closeBtn     = document.querySelector('.lightbox-close');
 
+let loadAbort = null;
+
 document.querySelectorAll('.lightbox-trigger').forEach(trigger => {
     trigger.addEventListener('click', () => {
         lightboxImg.alt = trigger.alt;
         lightboxCap.textContent = trigger.dataset.name;
+
+        if (loadAbort) loadAbort.abort();
+
         lightboxImg.src = trigger.src;
         if (lightboxImg.complete) {
             lightbox.showModal();
         } else {
-            lightboxImg.addEventListener('load', () => lightbox.showModal(), { once: true });
+            loadAbort = new AbortController();
+            lightboxImg.addEventListener('load', () => lightbox.showModal(), { once: true, signal: loadAbort.signal });
+            lightboxImg.addEventListener('error', () => lightbox.showModal(), { once: true, signal: loadAbort.signal });
         }
     });
 });
